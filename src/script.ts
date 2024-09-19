@@ -19,3 +19,30 @@ console.log(player); //undefined
 player = "Farhad"
 
 player = 22 //undefined is not data type so we can re assign this eassily
+
+
+// function multiply (a, b){
+//     return a * b
+// }
+
+// console.log(multiply(3,5));
+
+// showing some error in parameter a and b because we can not specified the type of a and b
+
+//Function
+function multiply (a : number, b : number){
+    return a * b
+}
+console.log(multiply(3,5));
+
+//Array
+
+let fruits = ['Apple','Orange','Banana']
+
+// fruits.push(34) Given error before compailing
+fruits.push('Ananas')
+
+let fruit = []
+
+fruit.push(34) // Given no error because it can be any type of array
+fruit.push('Banana')
