@@ -177,3 +177,25 @@ const userDetails = (
 const sayHello = (user: userType) => {
     console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."}) ${user.name}`);
 }
+
+let add :(x :number , y : number) => number;
+
+
+add = (a: number , b: number) => {
+    // console.log(a + b); 
+    //Type '(a: number, b: number) => void' is not assignable to type '(x: number, y: number) => number'.
+    //Type 'void' is not assignable to type 'number'.
+    return a +b;
+}
+
+let calculation :( a: number , b : number , c : string) => number;
+
+calculation = ( a: number , b : number , c : string) =>{
+    if(c == "Add"){
+        return a + b
+    }else{
+        return a-b
+    }
+}
+
+console.log(calculation(10,5, 'Add'));
