@@ -118,3 +118,38 @@ g = {
 }
 
 //Matched all types given no error
+
+// function type 
+let  myFUn : Function
+
+// myFUn = 6 I cant tell that because i mentiones Earleir that this is Function Type
+
+myFUn = () =>{
+    console.log('hello');
+}
+const myFUun = (a:string, b:number) =>{
+    console.log(`Hello I am ${a} , ${b} years old`);
+}
+myFUun('Farhad Hossen',22)
+
+// myFUun(22,'Farhad Hossen') because a can only recive string not number thats why given error
+
+const myFunc = (a:string, b:number, c?: string) =>{
+    console.log(`Hello I am ${a} , ${b} years old`);
+}
+myFunc('Farhad Hossen',22)
+
+// When we need a optional parameter we have to use ? mark
+
+const myFun = (a:string, b:number, c: string = '10') =>{
+    console.log(`Hello I am ${a} , ${b} years old`);
+}
+myFun('Farhad Hossen',22)
+
+// Specifying parameter using = 
+const farhad = (a:string , b:string) =>{
+    return a+b
+}
+farhad('farhad', 'Hossen')
+
+//When We Are No Returning Any Thing from Function Typescript Return A Void And Javascript Returning Undffined
