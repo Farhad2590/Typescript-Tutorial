@@ -120,36 +120,60 @@ g = {
 //Matched all types given no error
 
 // function type 
-let  myFUn : Function
+let myFUn: Function
 
 // myFUn = 6 I cant tell that because i mentiones Earleir that this is Function Type
 
-myFUn = () =>{
+myFUn = () => {
     console.log('hello');
 }
-const myFUun = (a:string, b:number) =>{
+const myFUun = (a: string, b: number) => {
     console.log(`Hello I am ${a} , ${b} years old`);
 }
-myFUun('Farhad Hossen',22)
+myFUun('Farhad Hossen', 22)
 
 // myFUun(22,'Farhad Hossen') because a can only recive string not number thats why given error
 
-const myFunc = (a:string, b:number, c?: string) =>{
+const myFunc = (a: string, b: number, c?: string) => {
     console.log(`Hello I am ${a} , ${b} years old`);
 }
-myFunc('Farhad Hossen',22)
+myFunc('Farhad Hossen', 22)
 
 // When we need a optional parameter we have to use ? mark
 
-const myFun = (a:string, b:number, c: string = '10') =>{
+const myFun = (a: string, b: number, c: string = '10') => {
     console.log(`Hello I am ${a} , ${b} years old`);
 }
-myFun('Farhad Hossen',22)
+myFun('Farhad Hossen', 22)
 
 // Specifying parameter using = 
-const farhad = (a:string , b:string) =>{
-    return a+b
+const farhad = (a: string, b: string) => {
+    return a + b
 }
 farhad('farhad', 'Hossen')
 
 //When We Are No Returning Any Thing from Function Typescript Return A Void And Javascript Returning Undffined
+
+// const userDetails = (
+//     id: string | number,
+//     user: { name: string; age: number }
+// ) => {
+//     console.log(`User id is ${id}, name is ${user.name} and age is ${user.age}`);
+// }
+// const sayHello = (user: { name: string; age: number }) => {
+//     console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."}) ${user.name}`);
+// }
+// huge function we can eassily komano jabe using common using type allis
+
+type stringORnumber = string | number;
+type userType = { name: string; age: number }
+
+const userDetails = (
+    id: stringORnumber,
+    user: userType
+) => {
+    console.log(`User id is ${id}, name is ${user.name} and age is ${user.age}`);
+}
+const sayHello = (user: userType) => {
+    console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."}) ${user.name}`);
+}
