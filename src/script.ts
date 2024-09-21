@@ -1,223 +1,214 @@
-console.log('Hello');
+// console.log('Hello');
 
-const Country = 'I Love Bangladesh more';
+// const Country = 'I Love Bangladesh more';
 
-console.log(Country);
+// console.log(Country);
 
-let playerName = "Mashrafee"
+// let playerName = "Mashrafee"
 
-let age = 56
-// playerName = 34 [Wrong]
-age = 46
+// let age = 56
+// // playerName = 34 [Wrong]
+// age = 46
 
-// Typescript solve the problem in code editor this is the special feature
+// // Typescript solve the problem in code editor this is the special feature
 
-let player;
-console.log(player); //undefined
-
-
-player = "Farhad"
-
-player = 22 //undefined is not data type so we can re assign this eassily
+// let player;
+// console.log(player); //undefined
 
 
-// function multiply (a, b){
+// player = "Farhad"
+
+// player = 22 //undefined is not data type so we can re assign this eassily
+
+
+// // function multiply (a, b){
+// //     return a * b
+// // }
+
+// // console.log(multiply(3,5));
+
+// // showing some error in parameter a and b because we can not specified the type of a and b
+
+// //Function
+// function multiply(a: number, b: number) {
 //     return a * b
 // }
+// console.log(multiply(3, 5));
 
-// console.log(multiply(3,5));
+// //Array
 
-// showing some error in parameter a and b because we can not specified the type of a and b
+// let fruits = ['Apple', 'Orange', 'Banana']
 
-//Function
-function multiply(a: number, b: number) {
-    return a * b
-}
-console.log(multiply(3, 5));
+// // fruits.push(34) Given error before compailing
+// fruits.push('Ananas')
 
-//Array
+// let fruit = []
 
-let fruits = ['Apple', 'Orange', 'Banana']
+// fruit.push(34) // Given no error because it can be any type of array
+// fruit.push('Banana')
 
-// fruits.push(34) Given error before compailing
-fruits.push('Ananas')
+// //giving multiple types of data in an array
 
-let fruit = []
+// let mixed = ['Farhad', 34, false]
 
-fruit.push(34) // Given no error because it can be any type of array
-fruit.push('Banana')
+// // now i can eassily push this 3 types of data in this array but i cant push other types
 
-//giving multiple types of data in an array
+// let playerDetails = {
+//     name: 'Mahamudullah',
+//     age: 40,
+//     isPlaying: true
+// }
 
-let mixed = ['Farhad', 34, false]
+// // playerDetails.name = 45  given error because name ois string typed
 
-// now i can eassily push this 3 types of data in this array but i cant push other types
+// // Explicit in declaring variable 
 
-let playerDetails = {
-    name: 'Mahamudullah',
-    age: 40,
-    isPlaying: true
-}
+// let a;
 
-// playerDetails.name = 45  given error because name ois string typed
+// a = 58
+// a = 'Farhad'
 
-// Explicit in declaring variable 
+// // but when we are telling that
 
-let a;
+// let b: string;
+// let c: number;
 
-a = 58
-a = 'Farhad'
+// // b = 34 given eror because b only can recieve string type 
 
-// but when we are telling that
+// // Explicit in Array
 
-let b: string;
-let c: number;
+// let d: string[] = [];
+// // d.push(34) given error because i only can push string in this array
+// d.push('Farhad')
 
-// b = 34 given eror because b only can recieve string type 
+// let e: (string | number)[] = [];
 
-// Explicit in Array
+// //now we can push string or number 2 types of data in this array
 
-let d: string[] = [];
-// d.push(34) given error because i only can push string in this array
-d.push('Farhad')
+// // Explicit in Object
 
-let e: (string | number)[] = [];
+// let f: object;
 
-//now we can push string or number 2 types of data in this array
+// f = {
+//     name: 'farhad',
+//     age: 22,
+//     isStudent: true
+// }
+// // in this object i can assign any type of data
 
-// Explicit in Object
+// //but when we are spwcifically telling data types we cant assign other data types in object
 
-let f: object;
+// let g: {
+//     name: string,
+//     age: number,
+//     adult: Boolean
+// }
+// // g = {
+// //     name: 'farhad',
+// //     age: 22,
+// //     adult: 'true'
+// // }
+// // given error before compailing  because i entered adult as a string 
 
-f = {
-    name: 'farhad',
-    age: 22,
-    isStudent: true
-}
-// in this object i can assign any type of data
 
-//but when we are spwcifically telling data types we cant assign other data types in object
-
-let g: {
-    name: string,
-    age: number,
-    adult: Boolean
-}
 // g = {
 //     name: 'farhad',
 //     age: 22,
-//     adult: 'true'
+//     adult: true
 // }
-// given error before compailing  because i entered adult as a string 
 
+// //Matched all types given no error
 
-g = {
-    name: 'farhad',
-    age: 22,
-    adult: true
-}
+// // function type 
+// let myFUn: Function
 
-//Matched all types given no error
+// // myFUn = 6 I cant tell that because i mentiones Earleir that this is Function Type
 
-// function type 
-let myFUn: Function
+// myFUn = () => {
+//     console.log('hello');
+// }
+// const myFUun = (a: string, b: number) => {
+//     console.log(`Hello I am ${a} , ${b} years old`);
+// }
+// myFUun('Farhad Hossen', 22)
 
-// myFUn = 6 I cant tell that because i mentiones Earleir that this is Function Type
+// // myFUun(22,'Farhad Hossen') because a can only recive string not number thats why given error
 
-myFUn = () => {
-    console.log('hello');
-}
-const myFUun = (a: string, b: number) => {
-    console.log(`Hello I am ${a} , ${b} years old`);
-}
-myFUun('Farhad Hossen', 22)
+// const myFunc = (a: string, b: number, c?: string) => {
+//     console.log(`Hello I am ${a} , ${b} years old`);
+// }
+// myFunc('Farhad Hossen', 22)
 
-// myFUun(22,'Farhad Hossen') because a can only recive string not number thats why given error
+// // When we need a optional parameter we have to use ? mark
 
-const myFunc = (a: string, b: number, c?: string) => {
-    console.log(`Hello I am ${a} , ${b} years old`);
-}
-myFunc('Farhad Hossen', 22)
+// const myFun = (a: string, b: number, c: string = '10') => {
+//     console.log(`Hello I am ${a} , ${b} years old`);
+// }
+// myFun('Farhad Hossen', 22)
 
-// When we need a optional parameter we have to use ? mark
+// // Specifying parameter using = 
+// const farhad = (a: string, b: string) => {
+//     return a + b
+// }
+// farhad('farhad', 'Hossen')
 
-const myFun = (a: string, b: number, c: string = '10') => {
-    console.log(`Hello I am ${a} , ${b} years old`);
-}
-myFun('Farhad Hossen', 22)
+// //When We Are No Returning Any Thing from Function Typescript Return A Void And Javascript Returning Undffined
 
-// Specifying parameter using = 
-const farhad = (a: string, b: string) => {
-    return a + b
-}
-farhad('farhad', 'Hossen')
+// // const userDetails = (
+// //     id: string | number,
+// //     user: { name: string; age: number }
+// // ) => {
+// //     console.log(`User id is ${id}, name is ${user.name} and age is ${user.age}`);
+// // }
+// // const sayHello = (user: { name: string; age: number }) => {
+// //     console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."}) ${user.name}`);
+// // }
+// // huge function we can eassily komano jabe using common using type allis
 
-//When We Are No Returning Any Thing from Function Typescript Return A Void And Javascript Returning Undffined
+// type stringORnumber = string | number;
+// type userType = { name: string; age: number }
 
 // const userDetails = (
-//     id: string | number,
-//     user: { name: string; age: number }
+//     id: stringORnumber,
+//     user: userType
 // ) => {
 //     console.log(`User id is ${id}, name is ${user.name} and age is ${user.age}`);
 // }
-// const sayHello = (user: { name: string; age: number }) => {
+// const sayHello = (user: userType) => {
 //     console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."}) ${user.name}`);
 // }
-// huge function we can eassily komano jabe using common using type allis
 
-type stringORnumber = string | number;
-type userType = { name: string; age: number }
-
-const userDetails = (
-    id: stringORnumber,
-    user: userType
-) => {
-    console.log(`User id is ${id}, name is ${user.name} and age is ${user.age}`);
-}
-const sayHello = (user: userType) => {
-    console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."}) ${user.name}`);
-}
-
-let add :(x :number , y : number) => number;
+// let add :(x :number , y : number) => number;
 
 
-add = (a: number , b: number) => {
-    // console.log(a + b); 
-    //Type '(a: number, b: number) => void' is not assignable to type '(x: number, y: number) => number'.
-    //Type 'void' is not assignable to type 'number'.
-    return a +b;
-}
+// add = (a: number , b: number) => {
+//     // console.log(a + b); 
+//     //Type '(a: number, b: number) => void' is not assignable to type '(x: number, y: number) => number'.
+//     //Type 'void' is not assignable to type 'number'.
+//     return a +b;
+// }
 
-let calculation :( a: number , b : number , c : string) => number;
+// let calculation :( a: number , b : number , c : string) => number;
 
-calculation = ( a: number , b : number , c : string) =>{
-    if(c == "Add"){
-        return a + b
-    }else{
-        return a-b
-    }
-}
+// calculation = ( a: number , b : number , c : string) =>{
+//     if(c == "Add"){
+//         return a + b
+//     }else{
+//         return a-b
+//     }
+// }
 
-console.log(calculation(10,5, 'Add'));
+// console.log(calculation(10,5, 'Add'));
 
 
-class Player {
-    name : string;
-    age : number;
-    country : string;
+import {Player} from './Player.js'
 
-    constructor(n:string, a:number, c:string){
-        this.name = n;
-        this.age = a;
-        this.country = c
-    }
-    play(){
-        console.log(`${this.name} from ${this.age} is palying`);
-        
-    }
-}
+console.log(Player);
+
 const mashrafi = new Player('Mashrafi',40,'Bangladesh')
 const sakib = new Player('Sakib',38,'Bangladesh')
+console.log(sakib.age);
+
 
 const players : Player[] = []
 
