@@ -213,3 +213,24 @@ console.log(sakib.age);
 const players : Player[] = []
 
 players.push(mashrafi)
+
+interface RectengaleOptions {
+    width: number;
+    length: number;
+}
+
+function drawrectangle(options: RectengaleOptions){
+    let width = options.width;
+    let length = options.length;
+}
+// drawrectangle({
+//     width:30,
+//     length:20
+// });
+
+let threeD = {
+    width:30,
+    length:20,
+    height :10
+}
+drawrectangle(threeD)

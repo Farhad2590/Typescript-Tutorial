@@ -140,9 +140,23 @@
 // }
 // console.log(calculation(10,5, 'Add'));
 import { Player } from './Player.js';
-// console.log(Player);
+console.log(Player);
 const mashrafi = new Player('Mashrafi', 40, 'Bangladesh');
 const sakib = new Player('Sakib', 38, 'Bangladesh');
 console.log(sakib.age);
 const players = [];
 players.push(mashrafi);
+function drawrectangle(options) {
+    let width = options.width;
+    let length = options.length;
+}
+// drawrectangle({
+//     width:30,
+//     length:20
+// });
+let threeD = {
+    width: 30,
+    length: 20,
+    height: 10
+};
+drawrectangle(threeD);
